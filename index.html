@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="stylesheet" href="/PrivacyPolicies/assets/css/style.css?v=33815a8bdf9223a4498639ab5bd076ad9cb56695">
-    <title>网址集合隐私策略</title>
-  </head>
+---
+layout: default
+title: IceSky's blog
+---
 
-  <body>
+<div class="home">
 
-    <header>
-      <div class="container">
-        <h1 style="text-align: center;">网址集合 增强版</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li>
+      <h1 >{{ post.title }}</h1>
+      
+      <div class="continue">
+        <a href="{{ post.url | prepend: site.baseurl }}">&bull;&bull;&bull;</a>
       </div>
-    </header>
+    </li>
+    {% endfor %}
+  </ul>
 
-    <div class="container">
-      <section id="main_content">
-        <h2 id="welcome-to-github-pages">隐私策略</h2>
-
-<p>　　《网址集合增强版》为个人开发，非常重视用户信息的保护，在使用本软件前，请您务必仔细阅读并透彻理解本声明。一旦您选择使用，即表示您认可并接受本条款现有内容及其可能随时更新的内容。</p>
-<span class="p">1.</span> 本软件为系统系统浏览器封装，本身不会收集任何个人信息，其他隐私权遵循用户访问网站的隐私策略。
-<span class="p">2.</span> 本软件只在访问需要定位时启用位置服务，是由用户访问的网址决定的，本身不会存储或向第三方提供位置信息。用户可以在设置中关闭定位服务。
-<span class="p">3.</span> 本软件为方便用户使用，可以保存访问网站的用户名和密码。为了密码安全，建议不要保存密码明文，可以使用部分明文的密码提示帮助回忆。密码存储在本地，不会向任何第三方提供。
-<span class="p">4.</span> 本软件提供导出功能，但导出信息中不会包含用户信息。
-<span class="p">5.</span> 其他隐私策略遵循微软的隐私策略。
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+</div>
